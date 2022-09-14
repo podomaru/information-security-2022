@@ -83,8 +83,11 @@ def pass_etw(input):
 
 # Wheels
 def pass_wheels(input, reverse = False):
-    # Implement Wheel Logics
-    # Keep in mind that reflected signals pass wheels in reverse order
+    
+    
+    #1
+    
+    
     return input
 
 # UKW
@@ -93,7 +96,11 @@ def pass_ukw(input):
 
 # Wheel Rotation
 def rotate_wheels():
-    # Implement Wheel Rotation Logics
+    
+    
+    #2
+    
+    
     pass
 
 # Enigma Exec Start
