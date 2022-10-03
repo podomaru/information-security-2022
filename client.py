@@ -40,10 +40,14 @@ class Receiver(Thread):
             self.handle_recv(received)
 
 def encrypt_message(msg: bytes) -> bytes:
+    
     # place your own implementation of
     # AES-128-ECB encryption with pycryptodome
 
-    return b''
+    t = pad(msg, BLOCK_SIZE)
+    cipher = AES.new(ENCRYPTION_KEY, AES.MODE_ECB)
+
+    return cipher.encrypt(t)
 
 client_socket = socket(AddressFamily.AF_INET, SocketKind.SOCK_STREAM)
 client_socket.connect(('127.0.0.1', 24000))
